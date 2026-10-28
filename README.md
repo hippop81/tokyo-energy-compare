@@ -1,19 +1,20 @@
-# 東京の電気・ガス料金比較（GitHub Pages）
+# Tokyo Utility Cost Lab - GitHub Pages
 
-20A/30A判定、電気・ガス使用量入力、各社の単品料金・セット割込み総額を比較するサイトです。
+Updated: 2026-10-28. Static files only: no build step.
 
-## `hippop81` のGitHub Pagesで公開する方法
+1. Log into GitHub as `hippop81`.
+2. Open the public repo `tokyo-energy-compare`.
+3. Upload **index.html** and **hikari.html** directly to the repo root. If already present, replace them, then commit.
+4. Under Settings > Pages: Deploy from a branch; branch: main; folder: /(root).
+5. URLs after publication:
+   - https://hippop81.github.io/tokyo-energy-compare/
+   - https://hippop81.github.io/tokyo-energy-compare/hikari.html
 
-1. `hippop81` で https://github.com/new を開き、`tokyo-energy-compare` という **Public** リポジトリを作成。`Add a README file` にチェックするとアップロード操作が簡単です。
-2. 作成したリポジトリの **Add file → Upload files** で、同梱の `index.html` を選んでアップロードし、**Commit changes**。
-3. リポジトリの **Settings → Pages → Build and deployment** で **Deploy from a branch**、ブランチ **main**、フォルダ **/(root)** を選んで **Save**。
-4. 公開後のURL： https://hippop81.github.io/tokyo-energy-compare/
+The Hikari comparison now includes:
+- 'unknown / no technician / technician reuses wiring / technician installs wiring' construction scenarios
+- full versus effectively-free construction fees, monthly offset and hypothetical cancellation balances
+- first-year / second-year / third-year all-in cost rankings
+- separate comparison for en-hikari Lite moving the existing contract; enter the relocation quote manually
+- mobile-friendly charts and shareable condition parameters in the URL
 
-`index.html` はリポジトリ直下に置いてください。フォルダ内の `index.html` やZIPファイルのままではトップページに表示されません。
-
-## 注意
-
-- 公開ページとリポジトリは誰でも見られます。秘密の情報は置かないでください。
-- 計算はブラウザ内で完結します。サーバーへの入力値送信はありません。
-- 料金は2026年10月28日時点の比較用モデルです。燃料費・原料費調整額・キャンペーン等は変化します。サイト内の「計算条件と出典」を必ず確認してください。
-- アンペア判定は家電の概算ワット数から考える目安で、設備や瞬間的な最大電力まで保証するものではありません。
+Data source URLs are included on the Hikari page. The published fees/campaigns were checked 2026-10-28 and can change. In particular, the @smart campaign page lists an October 31, 2026 application deadline. Special construction, installation, old-line cancellation, cashback and router charges are excluded.
