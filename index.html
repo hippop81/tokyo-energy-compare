@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#173440">
 <title>東京の電気・ガス料金比較｜20A・30A＆セット割（2026年版）</title>
-<meta name="description" content="東京エリアの都市ガス・電気料金を使用量ごとに比較。月3〜27m³、1〜199kWh、20A/30A、電気ガスセット割まで反映。">
+<meta name="description" content="東京エリアの都市ガス・電気料金を使用量ごとに比較。月3〜27m³、1〜199kWh、20A/30Aのかんたん判定、電気ガスセット割まで反映。">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:title" content="東京の電気・ガス料金比較｜使用量から最安をチェック">
@@ -17,22 +17,80 @@
 @media(max-width:850px){.controlGrid{grid-template-columns:1fr 1fr}.controlGrid>div:last-child{grid-column:1 / -1}.metrics{grid-template-columns:1fr 1fr}.metrics .leading{grid-column:1 / -1}.rankGrid{grid-template-columns:1fr}.explainer{grid-template-columns:repeat(3,1fr)}.sourceGrid{grid-template-columns:1fr 1fr}}
 @media(max-width:580px){.container{padding:0 15px}.hero .container{padding-top:32px;padding-bottom:36px}.hero h1{font-size:35px;margin:29px 0 14px}.lede{font-size:14px}.heroTop{align-items:flex-start}.heroBottom{gap:7px}.heroBottom span{font-size:10px}.nav .container{gap:23px}.section{margin-bottom:26px}.sectionTitle h2{font-size:21px}.controls{padding:18px}.controlGrid{grid-template-columns:1fr 1fr;gap:15px}.controlGrid>div:last-child{grid-column:1 / -1}.numberWrap input{width:100%;font-size:20px;min-width:0}.numberWrap{gap:5px}.numberWrap small{font-size:12px}.fieldLabel{font-size:12px}.fieldLabel span{font-size:10px}.metrics{gap:9px}.metric{padding:15px}.metricBig{font-size:29px}.metricAmount{font-size:23px}.metricFoot{font-size:10px}.rankPanel{padding:14px 15px}.rankName{font-size:11px}.price{font-size:15px}.rankItem{gap:8px}.sidePanel{padding:17px}.vizPanel{padding:15px 10px 12px}.svgChart{aspect-ratio:720 / 310}.legend{font-size:10px;gap:7px 10px}.tablePanel{padding:12px}.explainer{grid-template-columns:1fr}.bathCard{padding:16px}.sourceGrid{grid-template-columns:1fr}.notePanel{padding:17px}.sectionTitle small{font-size:10px}.presetBox strong{width:100%}.chip{font-size:11px}.dataTable{font-size:11px}}
 @media print{.nav,.shareRow{display:none}}
+
+/* 20A / 30A checker */
+.ampChecker{overflow:hidden}.ampLead{padding:21px 25px 18px;background:linear-gradient(120deg,#ecfaf5,#f9fcfb);border-bottom:1px solid #e2ece7}.ampEyebrow{font-size:10px;letter-spacing:.15em;font-weight:900;color:#0c856c}.ampLead h3{font-size:21px;letter-spacing:-.035em;margin:5px 0 6px}.ampLead p{font-size:13px;color:#536e70;margin:0;max-width:750px}.ampBody{padding:20px 25px 24px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:26px}.ampFieldset{border:0;padding:0;margin:0 0 20px;min-width:0}.ampFieldset legend{font-size:14px;font-weight:900;padding:0;margin-bottom:10px}.ampRadioList{display:grid;gap:8px}.ampRadio{display:flex;align-items:center;gap:10px;background:#fafcfc;border:1px solid #e3ece9;border-radius:12px;padding:10px 12px;cursor:pointer}.ampRadio:has(input:checked){border-color:#6bc4ac;background:#f0fbf5}.ampRadio input,.ampAppliance input{accent-color:#0b8773;width:17px;height:17px;flex:0 0 auto;margin:0}.ampRadio b{display:block;font-size:12px;line-height:1.4}.ampRadio small{display:block;font-size:10px;color:#728587;margin-top:3px}.ampHint{margin:0 0 10px;font-size:11px;color:#63787a}.ampAppliances{display:grid;grid-template-columns:1fr 1fr;gap:7px}.ampAppliance{display:flex;align-items:center;gap:8px;min-height:57px;border:1px solid #e3ece9;border-radius:11px;padding:8px 10px;cursor:pointer}.ampAppliance:has(input:checked){border-color:#70c3ae;background:#eefaf5}.ampAppliance span{font-size:11px;font-weight:850;line-height:1.25}.ampAppliance small{display:block;color:#78908c;font-size:10px;font-weight:650;margin-top:3px}.ampReport{background:#f8fbfa;border:1px solid #e0ece8;border-radius:18px;padding:20px;align-self:start;position:sticky;top:85px}.ampReportHeader{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:12px;color:#60787a;font-weight:800}.ampReportHeader strong{font-size:25px;letter-spacing:-.04em;color:#113e3b;font-variant-numeric:tabular-nums}.ampTrack{position:relative;margin-top:18px;width:100%;height:13px;background:#e3ecea;border-radius:30px;overflow:visible}.ampMeter{width:0;height:100%;background:linear-gradient(90deg,#74d3ac,#e9ad61);border-radius:30px;transition:width .2s ease}.ampMark{position:absolute;top:-5px;width:2px;height:23px;background:#365f66}.ampMark.mark20{left:57.142857%}.ampMark.mark30{left:85.714286%}.ampScale{display:flex;justify-content:space-between;gap:7px;margin-top:9px;font-size:10px;color:#778889}.ampScale span{text-align:center;line-height:1.25}.ampScale span:first-child{text-align:left}.ampScale b{color:#4b656b}.ampVerdictBox{background:white;border:1px solid #deeae5;border-radius:13px;padding:15px;margin-top:20px}.ampVerdictBox.ok{border-color:#9fddcb;background:#f1fbf7}.ampVerdictBox.warn{border-color:#e9d0a0;background:#fffbf3}.ampVerdictBox .ampVerdictLabel{font-size:10px;font-weight:900;letter-spacing:.05em;color:#68817f}.ampVerdictBox h3{font-size:19px;margin:4px 0 7px;letter-spacing:-.025em;line-height:1.35}.ampVerdictBox p{font-size:12px;color:#5e7474;margin:0}.ampSwitchBtns{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:13px}.ampSwitchBtns button{background:#fff;border:1px solid #bdceca;color:#42615c;border-radius:10px;padding:11px 7px;font-size:12px;font-weight:850;min-height:43px}.ampSwitchBtns button.recommended{background:#0d806e;border-color:#0d806e;color:white}.ampSwitchBtns button:hover{filter:brightness(.95)}.ampDiff{font-size:11px;color:#53746f;font-weight:700;margin:13px 0 0}.ampDisclaimer{font-size:10px;color:#78898a;line-height:1.6;margin:13px 0 0}
+@media(max-width:850px){.ampBody{grid-template-columns:1fr}.ampReport{position:static}.ampInputs{display:grid;grid-template-columns:1fr 1fr;gap:18px}.ampFieldset{margin:0}}
+@media(max-width:650px){.ampLead{padding:18px}.ampLead h3{font-size:18px}.ampBody{padding:16px;gap:18px}.ampInputs{grid-template-columns:1fr}.ampReport{padding:16px}.ampAppliances{gap:7px}.ampAppliance{min-height:54px;padding:8px}.ampAppliance span{font-size:11px}}
 </style>
 </head>
 <body>
 <header class="hero"><div class="container"><div class="heroTop"><div class="eyebrow">UTILITY COST LAB / TOKYO</div><span class="pill">2026年10月28日版</span></div><h1>使う量で、<em>最安</em>は変わる。</h1><p class="lede">一人暮らしの電気・都市ガス料金。使用量と契約アンペアを動かして、単品とセット割をまるごと比較。</p><div class="heroBottom"><span>東京電力エリア</span><span>東京ガス都市ガスエリア</span><span>20A / 30A</span><span>199kWh以下</span><span>都市ガス3〜27m³</span></div></div></header>
-<nav class="nav"><div class="container"><a href="#calculator">料金を入力</a><a href="#bundle">セット最安</a><a href="#gas">ガス比較</a><a href="#electric">電気比較</a><a href="#bath">お風呂</a><a href="#notes">出典・前提</a></div></nav>
+<nav class="nav"><div class="container"><a href="#calculator">料金を入力</a><a href="#ampGuide">20A/30A診断</a><a href="#bundle">セット最安</a><a href="#gas">ガス比較</a><a href="#electric">電気比較</a><a href="#bath">お風呂</a><a href="#notes">出典・前提</a></div></nav>
 <main class="container">
-<section class="section" id="calculator"><div class="sectionTitle"><h2>01 / 使い方を入力</h2><small>変更するとすべて再計算</small></div><div class="panel controls"><div class="controlGrid"><div><label class="fieldLabel" for="elecNum">電気の使用量<span>1か月あたり</span></label><div class="numberWrap"><input id="elecNum" type="number" min="1" max="199" step="1" value="130" inputmode="numeric"/><small>kWh</small></div><input class="range" id="elecRange" type="range" min="1" max="199" value="130" step="1" aria-label="電気の使用量"/><div class="rangeInfo"><span>1</span><span>199 kWh</span></div></div><div><label class="fieldLabel" for="gasNum">ガスの使用量<span>1か月あたり</span></label><div class="numberWrap"><input id="gasNum" type="number" min="3" max="27" step="0.1" value="4" inputmode="decimal"/><small>m³</small></div><input class="range" id="gasRange" type="range" min="3" max="27" value="4" step="0.1" aria-label="ガスの使用量"/><div class="rangeInfo"><span>3</span><span>27 m³</span></div></div><div><label class="fieldLabel">電気の契約アンペア<span>20Aはエネワンハッピー対象外</span></label><div class="segments" role="group" aria-label="電気の契約アンペア"><button id="amp20" class="active" type="button" aria-pressed="true">20A</button><button id="amp30" type="button" aria-pressed="false">30A</button></div><p class="minorNote">スマホでも自分の数字に変更OK。入力した数字はこの端末だけで計算。</p></div></div><div class="presetBox"><strong>ガスの目安を選ぶ：</strong><button class="chip primary" data-gas="4" type="button">シャワー中心 4m³</button><button class="chip" data-gas="12.4" type="button">夏・毎日180L 12.4m³</button><button class="chip" data-gas="15.2" type="button">春秋・毎日180L 15.2m³</button><button class="chip" data-gas="20.7" type="button">冬・毎日180L 20.7m³</button></div></div></section>
+<section class="section" id="calculator"><div class="sectionTitle"><h2>01 / 使い方を入力</h2><small>変更するとすべて再計算</small></div><div class="panel controls"><div class="controlGrid"><div><label class="fieldLabel" for="elecNum">電気の使用量<span>1か月あたり</span></label><div class="numberWrap"><input id="elecNum" type="number" min="1" max="199" step="1" value="130" inputmode="numeric"/><small>kWh</small></div><input class="range" id="elecRange" type="range" min="1" max="199" value="130" step="1" aria-label="電気の使用量"/><div class="rangeInfo"><span>1</span><span>199 kWh</span></div></div><div><label class="fieldLabel" for="gasNum">ガスの使用量<span>1か月あたり</span></label><div class="numberWrap"><input id="gasNum" type="number" min="3" max="27" step="0.1" value="4" inputmode="decimal"/><small>m³</small></div><input class="range" id="gasRange" type="range" min="3" max="27" value="4" step="0.1" aria-label="ガスの使用量"/><div class="rangeInfo"><span>3</span><span>27 m³</span></div></div><div><label class="fieldLabel">電気の契約アンペア<span>20Aはエネワンハッピー対象外</span></label><div class="segments" role="group" aria-label="電気の契約アンペア"><button id="amp20" class="active" type="button" aria-pressed="true">20A</button><button id="amp30" type="button" aria-pressed="false">30A</button></div><p class="minorNote">スマホでも自分の数字に変更OK。入力内容はこの端末だけで計算。<br><a href="#ampGuide">20Aと30Aで迷ったら、かんたん判定 ↓</a></p></div></div><div class="presetBox"><strong>ガスの目安を選ぶ：</strong><button class="chip primary" data-gas="4" type="button">シャワー中心 4m³</button><button class="chip" data-gas="12.4" type="button">夏・毎日180L 12.4m³</button><button class="chip" data-gas="15.2" type="button">春秋・毎日180L 15.2m³</button><button class="chip" data-gas="20.7" type="button">冬・毎日180L 20.7m³</button></div></div></section>
+
+<section class="section" id="ampGuide">
+  <div class="sectionTitle"><h2>20A / 30A｜かんたん判定</h2><small>家電の数より、同時に使う量</small></div>
+  <div class="panel ampChecker">
+    <div class="ampLead">
+      <div class="ampEyebrow">AMPERE GUIDE</div>
+      <h3>家電が多い＝30Aが必要、ではない。</h3>
+      <p>20Aでも長く問題なく生活できているなら、まずはその実績を優先！ 迷う人は、<b>日常で同時に使う家電</b>を選んで目安を確認しよう。</p>
+    </div>
+    <div class="ampBody">
+      <div class="ampInputs">
+        <fieldset class="ampFieldset">
+          <legend>Q1. いまの暮らしの実績は？</legend>
+          <div class="ampRadioList">
+            <label class="ampRadio"><input type="radio" name="ampHistory" value="ok"><span><b>20Aで生活中。ほとんど落ちない</b><small>実績あり！ 20A継続の有力材料</small></span></label>
+            <label class="ampRadio"><input type="radio" name="ampHistory" value="trips"><span><b>20Aでよくブレーカーが落ちる</b><small>同時に使う機器が多いかも</small></span></label>
+            <label class="ampRadio"><input type="radio" name="ampHistory" value="unknown" checked><span><b>分からない／これから引っ越す</b><small>下の同時使用チェックで判定</small></span></label>
+          </div>
+        </fieldset>
+        <fieldset class="ampFieldset ampApplianceField">
+          <legend>Q2. 同じタイミングに動かす家電は？</legend>
+          <p class="ampHint">全部の家電ではなく、<b>重なる可能性が高いもの</b>だけ選択。冷蔵庫・照明・ルーターなどは一律200Wを加算しているよ。</p>
+          <div class="ampAppliances">
+            <label class="ampAppliance"><input type="checkbox" data-watts="700"><span>エアコン（通常時）<small>約700W</small></span></label>
+            <label class="ampAppliance"><input type="checkbox" data-watts="1300"><span>電子レンジ<small>約1,300W</small></span></label>
+            <label class="ampAppliance"><input type="checkbox" data-watts="1200"><span>ドライヤー<small>約1,200W</small></span></label>
+            <label class="ampAppliance"><input type="checkbox" data-watts="1200"><span>電気ケトル<small>約1,200W</small></span></label>
+            <label class="ampAppliance"><input type="checkbox" data-watts="1400"><span>IH調理器<small>約1,400W</small></span></label>
+            <label class="ampAppliance"><input type="checkbox" data-watts="1000"><span>電気ヒーター<small>約1,000W</small></span></label>
+            <label class="ampAppliance"><input type="checkbox" data-watts="1300"><span>洗濯乾燥機（乾燥）<small>約1,300W</small></span></label>
+            <label class="ampAppliance"><input type="checkbox" data-watts="900"><span>掃除機<small>約900W</small></span></label>
+          </div>
+        </fieldset>
+      </div>
+      <div class="ampReport" aria-live="polite" aria-atomic="true">
+        <div class="ampReportHeader"><span>同時使用の概算</span><strong id="ampWatts">200W</strong></div>
+        <div class="ampTrack" aria-hidden="true"><div id="ampMeter" class="ampMeter"></div><i class="ampMark mark20"></i><i class="ampMark mark30"></i></div>
+        <div class="ampScale"><span>0</span><span>20A目安<br><b>2,000W</b></span><span>30A目安<br><b>3,000W</b></span></div>
+        <div class="ampVerdictBox" id="ampVerdictBox">
+          <div class="ampVerdictLabel">判定の目安</div>
+          <h3 id="ampVerdict">家電を選ぶと判定するよ</h3>
+          <p id="ampVerdictDesc">または「20Aで問題ない」を選んでね。</p>
+        </div>
+        <div class="ampSwitchBtns">
+          <button type="button" id="compare20">20Aで料金比較</button>
+          <button type="button" id="compare30">30Aで料金比較</button>
+        </div>
+        <p class="ampDiff" id="ampBasicDiff"></p>
+        <p class="ampDisclaimer">※100Vの目安として20A≒2,000W、30A≒3,000W。機器の消費電力は例示値で、エアコンの立ち上がり・寒い日・家電の個体差・200V機器・契約/設備条件は反映できないよ。確定判定ではありません。</p>
+      </div>
+    </div>
+  </div>
+</section>
 <section class="section" id="bundle"><div class="sectionTitle"><h2>02 / 組み合わせの最安</h2><small>セット割込み・1か月</small></div><div class="metrics"><div class="panel metric leading"><div class="metricLabel">最安の組み合わせ</div><div class="metricTitle" id="bestPairName">計算中...</div><div class="metricBig" id="bestPairPrice">—</div><div class="diff" id="bestPairDiff"></div><div class="metricFoot">電気＋都市ガスの概算。固定費・調整額・再エネ賦課金込み。</div></div><div class="panel metric"><div class="metricLabel">電気だけなら最安</div><div class="metricTitle" id="bestEName">—</div><div class="metricAmount" id="bestEPrice">—</div><div class="metricFoot">※セット割を考えない単独料金</div></div><div class="panel metric"><div class="metricLabel">ガスだけなら最安</div><div class="metricTitle" id="bestGName">—</div><div class="metricAmount" id="bestGPrice">—</div><div class="metricFoot">※セット割を考えない単独料金</div></div></div><div class="rankGrid" style="margin-top:14px"><div class="panel rankPanel"><div class="rankHead"><b>電気＋ガス 合計ランキング</b><small>上位6組</small></div><div id="rankList" aria-live="polite"></div></div><div class="panel sidePanel"><h3>単品最安を別々に選ぶと？</h3><p>電気だけ・ガスだけの最安を単純に足した金額と、割引込みの最安ペアを比較。</p><div class="pointRow"><span>単品最安の合計</span><strong id="separateTotal">—</strong></div><div class="pointRow"><span>セット割込みの最安</span><strong id="bestTotalSide">—</strong></div><div class="sideCallout" id="bundleBenefit">—</div><div class="specialNote">短期特価・新規申込特典を除く比較。オクトパス「シンプル」は初年度限定の料金なので、2年目以降の順位は変わり得ます。</div></div></div><div class="panel tablePanel comparison"><h3 id="compareTitle">主なセットプランと「別契約」の比較</h3><div class="scrollTable"><table class="dataTable"><thead><tr><th>組み合わせ</th><th>割引前</th><th>セット割</th><th>合計／月</th><th>最安との差</th></tr></thead><tbody id="bundleRows"></tbody></table></div><p class="minorNote">「東京電力EP」はスタンダードS＋とくとくガス、「東京ガス」は基本プラン＋一般料金。エネワン＋ガスワンは提携セットの330円割引。CDは電気・ガス双方、東京ガスは電気のみ0.5%割引。割引は対象料金部分から算出。</p></div><div class="shareRow"><button class="shareBtn" id="copyButton" type="button">この条件の比較結果をコピー</button><button class="shareBtn secondary" id="resetButton" type="button">130kWh・4m³・20Aに戻す</button><span class="toast" id="copyMessage" aria-live="polite"></span></div></section>
 <section class="section" id="gas"><div class="sectionTitle"><h2>03 / 都市ガスの比較</h2><small>3〜27m³・5社</small></div><div class="panel vizPanel"><p class="chartTitle">毎月の使用量別・ガス料金</p><p class="chartSub">燃料代・原料費調整込み。破線は現在入力中のガス使用量。セット割は含めません。</p><svg id="gasChart" class="svgChart" viewBox="0 0 720 275" role="img" aria-label="ガス料金の折れ線グラフ"></svg><div class="legend" id="gasLegend"></div></div><div class="panel tablePanel"><p class="miniTitle">ガスの月額一覧（円）｜入力値に近い行は色付き</p><div class="scrollTable"><table class="dataTable"><thead id="gasTableHead"></thead><tbody id="gasTableBody"></tbody></table></div></div></section>
 <section class="section" id="electric"><div class="sectionTitle"><h2>04 / 電気の比較</h2><small id="eAmpTag">20A・1〜199kWh</small></div><div class="panel vizPanel"><p class="chartTitle">毎月の使用量別・電気料金</p><p class="chartSub">選択中のアンペアで自動切替。破線は入力中の電気使用量。セット割は含めません。</p><svg id="electricChart" class="svgChart" viewBox="0 0 720 275" role="img" aria-label="電気料金の折れ線グラフ"></svg><div class="legend" id="electricLegend"></div></div><div class="panel tablePanel"><p class="miniTitle" id="electricTableTitle">電気20Aの月額一覧（円）</p><div class="scrollTable"><table class="dataTable"><thead id="electricTableHead"></thead><tbody id="electricTableBody"></tbody></table></div></div></section>
 <section class="section" id="bath"><div class="sectionTitle"><h2>05 / 毎日180L、お湯を張るなら</h2><small>30日間・40℃・追い焚きなし</small></div><div class="explainer" id="bathCards"></div><div class="specialNote">上の試算は「シャワー等でガス4m³使ったうえで、毎日180Lを追加する」ケース。実際には湯船のお湯でシャワーを減らしたり、追い焚きしたりするので前後します。水道・下水道料金は含まないよ。</div></section>
-<section class="section" id="notes"><div class="sectionTitle"><h2>06 / 計算条件と出典</h2><small>ここは必ず読んでね</small></div><div class="panel notePanel"><h3>これは「比較モデル」です</h3><p>2026年10月28日時点に公表されている各社の料金表をもとに、電気は20A/30A・1〜199kWh、東京ガス都市ガスの供給区域で都市ガス3〜27m³の場合を比較しました。居住物件が都市ガス・対象区域であることが前提です。</p><p><b>重要：</b>2026年11月の燃料費・原料費調整単価を固定し、各社の2026年11月改定後（東京ガスの電気は12月改定後）の基本料金と単価を適用しています。つまり実際の同じ請求月の料金をそのまま再現するものではありません。電気の再エネ賦課金は4.18円/kWh。電気の燃料費調整は対象プランで▲5.33円/kWh、enひかり電気・シンプルオクトパスは0円とし、ガスは11月の調整後単価を使用。</p><p>金額は消費税込みの概算、円未満は表示時のみ四捨五入。消費電力最低料金・検針日による日割り・容量変更月の扱い、ポイント、申込特典、燃料費調整額の将来変動、制度の変更は含みません。ガス料金は20m³までと20m³超の段階別単価を使用。</p><p><b>セット割の扱い：</b>CDエナジーは電気・ガスそれぞれの基本料金＋調整前従量料金に0.5%、東京ガスは電気の対象料金に0.5%、東京電力EPは対象セットで月102円、エネワンでんき＋ガスワンは月330円。実際の契約条件・対象エリア・申込時期を確認してください。</p><p><b>プランの制約：</b>エネワンハッピーは30A以上。オクトパス「シンプル」は最初の12か月のみ、以降は別料金へ移行します。enひかり電気はenひかりの光回線契約が条件。光回線だけ解約して電気を継続すると追加料金が生じる可能性があるため、回線乗り換え時は電気の契約条件を確認してください。</p><h3 style="margin-top:23px">参照した料金表・公式情報</h3><div class="sourceGrid" id="sourceList"></div><p style="margin-top:16px">制作：2026年10月28日｜データを外部へ送信しない、オフラインで動く比較ツール。</p></div></section>
+<section class="section" id="notes"><div class="sectionTitle"><h2>06 / 計算条件と出典</h2><small>ここは必ず読んでね</small></div><div class="panel notePanel"><h3>これは「比較モデル」です</h3><p>2026年10月28日時点に公表されている各社の料金表をもとに、電気は20A/30A・1〜199kWh、東京ガス都市ガスの供給区域で都市ガス3〜27m³の場合を比較しました。居住物件が都市ガス・対象区域であることが前提です。</p><p><b>重要：</b>2026年11月の燃料費・原料費調整単価を固定し、各社の2026年11月改定後（東京ガスの電気は12月改定後）の基本料金と単価を適用しています。つまり実際の同じ請求月の料金をそのまま再現するものではありません。電気の再エネ賦課金は4.18円/kWh。電気の燃料費調整は対象プランで▲5.33円/kWh、enひかり電気・シンプルオクトパスは0円とし、ガスは11月の調整後単価を使用。</p><p>金額は消費税込みの概算、円未満は表示時のみ四捨五入。消費電力最低料金・検針日による日割り・容量変更月の扱い、ポイント、申込特典、燃料費調整額の将来変動、制度の変更は含みません。ガス料金は20m³までと20m³超の段階別単価を使用。</p><p><b>セット割の扱い：</b>CDエナジーは電気・ガスそれぞれの基本料金＋調整前従量料金に0.5%、東京ガスは電気の対象料金に0.5%、東京電力EPは対象セットで月102円、エネワンでんき＋ガスワンは月330円。実際の契約条件・対象エリア・申込時期を確認してください。</p><p><b>プランの制約：</b>エネワンハッピーは30A以上。オクトパス「シンプル」は最初の12か月のみ、以降は別料金へ移行します。enひかり電気はenひかりの光回線契約が条件。光回線だけ解約して電気を継続すると追加料金が生じる可能性があるため、回線乗り換え時は電気の契約条件を確認してください。</p><p><b>アンペア判定について：</b>20A≒2,000W、30A≒3,000Wという100Vの概算を使った目安です。家電の表示例は固定の参考値で、季節・始動時の突入電流・機器仕様・住宅設備によって異なります。家電の台数ではなく、同時に使う負荷と実際のブレーカーの経験を重視してください。契約変更の可否・手続きは電力会社へ。</p><h3 style="margin-top:23px">参照した料金表・公式情報</h3><div class="sourceGrid" id="sourceList"></div><p style="margin-top:16px">制作：2026年10月28日｜データを外部へ送信しない、オフラインで動く比較ツール。</p></div></section>
 </main><div class="footer">TOKYO UTILITY COST LAB — 料金は条件によって変わります。契約前に最新の公式情報をご確認ください。</div>
 <script>
 'use strict';
-const DATA={"date":"2026-10-28","fuel":-5.33,"levy":4.18,"elec":[{"id":"cd","name":"CDエナジー","plan":"ベーシックでんきB","color":"#e47756","base20":712.76,"base30":1069.14,"u1":29.9,"u2":35.59,"fuel":-5.33,"minamp":10},{"id":"tepco","name":"東京電力EP","plan":"スタンダードS","color":"#4267bf","base20":784.12,"base30":1176.18,"u1":29.85,"u2":36.45,"fuel":-5.33,"minamp":10},{"id":"tokyogas","name":"東京ガス","plan":"基本プラン（12月改定後）","color":"#b87940","base20":784.1,"base30":1176.15,"u1":29.75,"u2":35.74,"fuel":-5.33,"minamp":10},{"id":"octopus","name":"オクトパス","plan":"シンプル（初年度のみ）","color":"#17a6a1","base20":0,"base30":0,"u1":31.93,"u2":31.93,"fuel":0,"minamp":10},{"id":"enhikari","name":"enひかり電気","plan":"光回線セット契約時","color":"#7d8da3","base20":390,"base30":390,"u1":30.5,"u2":30.5,"fuel":0,"minamp":10},{"id":"eneone","name":"エネワンでんき","plan":"エネワンハッピー（30A〜）","color":"#a477c4","base20":null,"base30":1140.69,"u1":29.8,"u2":36.4,"fuel":-5.33,"minamp":30}],"gas":[{"id":"cd","name":"CDエナジー","plan":"ベーシックガス","color":"#e47756","aBase":735.46,"aRate":185.57,"aBenchmark":140.76,"bBase":1022.38,"bRate":171.23,"bBenchmark":126.42},{"id":"tokyogas","name":"東京ガス","plan":"一般料金（東京地区等）","color":"#b87940","aBase":909,"aRate":190.94,"aBenchmark":170.81,"bBase":1206,"bRate":176.09,"bBenchmark":155.96},{"id":"tepco","name":"東京電力EP","plan":"とくとくガスプラン","color":"#4267bf","aBase":736.23,"aRate":185.75,"aBenchmark":140.94,"bBase":1024.32,"bRate":171.35,"bBenchmark":126.54},{"id":"gasone","name":"ガスワン","plan":"都市ガスハッピープラン","color":"#1a9687","aBase":728.64,"aRate":184.3,"aBenchmark":139.49,"bBase":1013.76,"bRate":170.04,"bBenchmark":125.23},{"id":"elpio","name":"エルピオ","plan":"都市ガス・スタンダード","color":"#8764b0","aBase":975,"aRate":170.99,"aBenchmark":125.11,"bBase":1015,"bRate":169.88,"bBenchmark":124}],"sources":[{"name":"CDエナジー｜ベーシックでんきB","url":"https://www.cdedirect.co.jp/plan/denki/basic_denki/"},{"name":"CDエナジー｜2026年11月ガス調整額","url":"https://www.cdedirect.co.jp/assets/pdf/agreement/gas/gencho_202611.pdf"},{"name":"CDエナジー｜電気・ガスセット割","url":"https://www.cdedirect.co.jp/sim/ryokin/"},{"name":"東京電力EP｜2026年11月低圧料金改定","url":"https://www.tepco.co.jp/ep/private/plan/pdf/20261101_teiatsu_minaoshi_ikinai.pdf"},{"name":"東京電力EP｜とくとくガス／セット割","url":"https://www.tepco.co.jp/ep/gas-jiyuuka/plan/kanto/index-j.html"},{"name":"東京ガス｜2026年12月基本プラン改定","url":"https://home.tokyo-gas.co.jp/information/nvibqd0000000pml-att/power-basic-261201.pdf"},{"name":"東京ガス｜ガス料金・2026年11月","url":"https://home.tokyo-gas.co.jp/column/gas_power/0129"},{"name":"東京ガス｜電気・ガスセット割","url":"https://support.tokyo-gas.co.jp/faq/show/4080?back=front%2Fcategory%3Ashow&category_id=902&page=1&site_domain=open&sort=sort_new&sort_order=asc"},{"name":"ガスワン｜2026年11月原料費調整","url":"https://www.gasone.net/wp-gasone/wp-content/uploads/2025/12/202611_rawmaterialcost_tokyo.pdf"},{"name":"ガスワン｜エネワンセット割","url":"https://www.gasone.net/service/discount/"},{"name":"エネワンでんき｜東京電力エリア料金表","url":"https://eneonedenki.net/pdf/ryokintankahyou_03tokyo.pdf"},{"name":"エネワンでんき｜2026年11月調整単価","url":"https://eneonedenki.net/pdf/fuelcost_low_202611.pdf"},{"name":"エルピオ都市ガス｜料金表","url":"https://www.lpio.jp/city_gas/city_plan/"},{"name":"エルピオ都市ガス｜原料費調整","url":"https://lpio.jp/pdf/city_genryo.pdf"},{"name":"enひかり電気｜料金・光回線契約条件","url":"https://www.enhikari.jp/denki.html"},{"name":"シンプルオクトパス｜料金・期間条件","url":"https://electrical.cracierge.co.jp/simple-octopus/"}]};
+const DATA={"date":"2026-10-28","fuel":-5.33,"levy":4.18,"elec":[{"id":"cd","name":"CDエナジー","plan":"ベーシックでんきB","color":"#e47756","base20":712.76,"base30":1069.14,"u1":29.9,"u2":35.59,"fuel":-5.33,"minamp":10},{"id":"tepco","name":"東京電力EP","plan":"スタンダードS","color":"#4267bf","base20":784.12,"base30":1176.18,"u1":29.85,"u2":36.45,"fuel":-5.33,"minamp":10},{"id":"tokyogas","name":"東京ガス","plan":"基本プラン（12月改定後）","color":"#b87940","base20":784.1,"base30":1176.15,"u1":29.75,"u2":35.74,"fuel":-5.33,"minamp":10},{"id":"octopus","name":"オクトパス","plan":"シンプル（初年度のみ）","color":"#17a6a1","base20":0,"base30":0,"u1":31.93,"u2":31.93,"fuel":0,"minamp":10},{"id":"enhikari","name":"enひかり電気","plan":"光回線セット契約時","color":"#7d8da3","base20":390,"base30":390,"u1":30.5,"u2":30.5,"fuel":0,"minamp":10},{"id":"eneone","name":"エネワンでんき","plan":"エネワンハッピー（30A〜）","color":"#a477c4","base20":null,"base30":1140.69,"u1":29.8,"u2":36.4,"fuel":-5.33,"minamp":30}],"gas":[{"id":"cd","name":"CDエナジー","plan":"ベーシックガス","color":"#e47756","aBase":735.46,"aRate":185.57,"aBenchmark":140.76,"bBase":1022.38,"bRate":171.23,"bBenchmark":126.42},{"id":"tokyogas","name":"東京ガス","plan":"一般料金（東京地区等）","color":"#b87940","aBase":909,"aRate":190.94,"aBenchmark":170.81,"bBase":1206,"bRate":176.09,"bBenchmark":155.96},{"id":"tepco","name":"東京電力EP","plan":"とくとくガスプラン","color":"#4267bf","aBase":736.23,"aRate":185.75,"aBenchmark":140.94,"bBase":1024.32,"bRate":171.35,"bBenchmark":126.54},{"id":"gasone","name":"ガスワン","plan":"都市ガスハッピープラン","color":"#1a9687","aBase":728.64,"aRate":184.3,"aBenchmark":139.49,"bBase":1013.76,"bRate":170.04,"bBenchmark":125.23},{"id":"elpio","name":"エルピオ","plan":"都市ガス・スタンダード","color":"#8764b0","aBase":975,"aRate":170.99,"aBenchmark":125.11,"bBase":1015,"bRate":169.88,"bBenchmark":124}],"sources":[{"name":"CDエナジー｜ベーシックでんきB","url":"https://www.cdedirect.co.jp/plan/denki/basic_denki/"},{"name":"CDエナジー｜2026年11月ガス調整額","url":"https://www.cdedirect.co.jp/assets/pdf/agreement/gas/gencho_202611.pdf"},{"name":"CDエナジー｜電気・ガスセット割","url":"https://www.cdedirect.co.jp/sim/ryokin/"},{"name":"東京電力EP｜2026年11月低圧料金改定","url":"https://www.tepco.co.jp/ep/private/plan/pdf/20261101_teiatsu_minaoshi_ikinai.pdf"},{"name":"東京電力EP｜とくとくガス／セット割","url":"https://www.tepco.co.jp/ep/gas-jiyuuka/plan/kanto/index-j.html"},{"name":"東京ガス｜2026年12月基本プラン改定","url":"https://home.tokyo-gas.co.jp/information/nvibqd0000000pml-att/power-basic-261201.pdf"},{"name":"東京ガス｜ガス料金・2026年11月","url":"https://home.tokyo-gas.co.jp/column/gas_power/0129"},{"name":"東京ガス｜電気・ガスセット割","url":"https://support.tokyo-gas.co.jp/faq/show/4080?back=front%2Fcategory%3Ashow&category_id=902&page=1&site_domain=open&sort=sort_new&sort_order=asc"},{"name":"ガスワン｜2026年11月原料費調整","url":"https://www.gasone.net/wp-gasone/wp-content/uploads/2025/12/202611_rawmaterialcost_tokyo.pdf"},{"name":"ガスワン｜エネワンセット割","url":"https://www.gasone.net/service/discount/"},{"name":"エネワンでんき｜東京電力エリア料金表","url":"https://eneonedenki.net/pdf/ryokintankahyou_03tokyo.pdf"},{"name":"エネワンでんき｜2026年11月調整単価","url":"https://eneonedenki.net/pdf/fuelcost_low_202611.pdf"},{"name":"エルピオ都市ガス｜料金表","url":"https://www.lpio.jp/city_gas/city_plan/"},{"name":"エルピオ都市ガス｜原料費調整","url":"https://lpio.jp/pdf/city_genryo.pdf"},{"name":"enひかり電気｜料金・光回線契約条件","url":"https://www.enhikari.jp/denki.html"},{"name":"シンプルオクトパス｜料金・期間条件","url":"https://electrical.cracierge.co.jp/simple-octopus/"},{"name":"東京電力EP｜主な家電のアンペア目安","url":"https://www.tepco.co.jp/ep/private/ampere2/ampere03.html"},{"name":"東京電力EP｜契約アンペアの選び方","url":"https://www4.tepco.co.jp/ep/private/ampere2/ampere02.html"}]};
 const JPY=n=>`${Math.round(n).toLocaleString('ja-JP')}円`;
 const fm=n=>Number(n).toLocaleString('ja-JP',{maximumFractionDigits:1});
 const E=Object.fromEntries(DATA.elec.map(p=>[p.id,p]));
@@ -88,6 +146,69 @@ document.getElementById('copyButton').addEventListener('click',async()=>{const c
 try{await navigator.clipboard.writeText(s);document.getElementById('copyMessage').textContent='結果をコピーしました'}catch(err){const t=document.createElement('textarea');t.value=s;t.style.position='fixed';t.style.opacity='0';document.body.append(t);t.select();let ok=document.execCommand('copy');t.remove();document.getElementById('copyMessage').textContent=ok?'結果をコピーしました':'コピーできない場合は画面をスクショしてね'}});
 document.getElementById('sourceList').innerHTML=DATA.sources.map(s=>`<a href="${s.url}" target="_blank" rel="noopener noreferrer">↗ ${s.name}</a>`).join('');
 renderBath();renderAll();
+
+// Friendly, non-binding ampere guide. The actual 20A experience is more informative than appliance count.
+(function initAmpGuide(){
+  const historyInputs=[...document.querySelectorAll('input[name="ampHistory"]')];
+  const appliances=[...document.querySelectorAll('.ampAppliance input[type="checkbox"]')];
+  const wattEl=document.getElementById('ampWatts');
+  const meterEl=document.getElementById('ampMeter');
+  const boxEl=document.getElementById('ampVerdictBox');
+  const verdictEl=document.getElementById('ampVerdict');
+  const descEl=document.getElementById('ampVerdictDesc');
+  const button20=document.getElementById('compare20');
+  const button30=document.getElementById('compare30');
+  document.getElementById('ampBasicDiff').textContent='基本料金の差（CDエナジー例）：20A→30Aで月約'+JPY(E.cd.base30-E.cd.base20)+'、年約'+JPY((E.cd.base30-E.cd.base20)*12)+'増。';
+  function updateAmpGuide(){
+    const history=historyInputs.find(e=>e.checked)?.value||'unknown';
+    const selected=appliances.filter(e=>e.checked);
+    const total=200+selected.reduce((acc,e)=>acc+Number(e.dataset.watts||0),0);
+    wattEl.textContent=total.toLocaleString('ja-JP')+'W';
+    meterEl.style.width=Math.min(100,total/3500*100)+'%';
+    let recommended=null,verdict='',reason='',warning=false;
+    if(history==='ok'){
+      recommended=20;verdict='20Aのままでよさそう！';
+      reason='実際に20Aで困っていないなら、その経験が最も参考になるよ。新居の冬の暖房・家電の使い方が変わる場合だけ、様子を見よう。';
+      if(total>2100)reason+=' ※チェックした全家電を同時使用すると計算上は超過するので、時間帯が重なるか確認してね。';
+    }else if(history==='trips'){
+      recommended=30;verdict='30Aを検討しよう';
+      reason='20Aで繰り返し落ちるなら30Aが快適になりそう。同時利用を避ける工夫で20Aを継続する選択もできるよ。';
+    }else if(!selected.length){
+      verdict='同時に使う家電を選ぼう';
+      reason='よく重なる家電を選ぶと、20Aと30Aのどちらが向いていそうか表示するよ。';
+    }else if(total<=1500){
+      recommended=20;verdict='20Aから試せそう';
+      reason='この組み合わせなら20Aの目安に余裕あり。寒い日のエアコンなど消費電力が上がる場面には注意。';
+    }else if(total<=2000){
+      recommended=20;verdict='20Aも可能。少し慎重に';
+      reason='20Aの上限に近いので、エアコンの始動や他の家電の重なり次第で落ちることも。安さ優先なら20Aから、余裕優先なら30A。';
+      warning=true;
+    }else if(total<=3000){
+      recommended=30;verdict='30Aが安心そう';
+      reason='この同時使用だと20Aの目安を超えるよ。家電を順番に使うなら20Aもありだけど、重ねて使いたいなら30Aが無難。';
+      warning=true;
+    }else{
+      recommended=30;verdict='30Aでも使い方に注意';
+      reason='30Aの目安も超える計算。すべて重なるのを避けるか、電力会社に契約容量・設備を確認しよう。';
+      warning=true;
+    }
+    verdictEl.textContent=verdict;
+    descEl.textContent=reason;
+    boxEl.classList.toggle('ok',recommended===20&&!warning);
+    boxEl.classList.toggle('warn',warning||recommended===30);
+    button20.classList.toggle('recommended',recommended===20);
+    button30.classList.toggle('recommended',recommended===30);
+    button20.textContent=recommended===20?'20Aで比較 ★':'20Aで料金比較';
+    button30.textContent=recommended===30?'30Aで比較 ★':'30Aで料金比較';
+  }
+  [...historyInputs,...appliances].forEach(e=>e.addEventListener('change',updateAmpGuide));
+  [button20,button30].forEach((b,i)=>b.addEventListener('click',()=>{
+    state.amp=i===0?20:30;
+    renderAll();
+    document.getElementById('bundle').scrollIntoView({behavior:'smooth',block:'start'});
+  }));
+  updateAmpGuide();
+})();
 window.__energyApp={state,DATA,combos,eCost,gCost,pair};
 </script>
 </body></html>
